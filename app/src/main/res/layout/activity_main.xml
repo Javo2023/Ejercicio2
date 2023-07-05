@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-
-
-
-
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -25,15 +18,41 @@
         app:srcCompat="@drawable/ic_surprised_pikachu_meme" />
 
     <androidx.fragment.app.FragmentContainerView
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_project"
         android:id="@+id/contenedor"
         android:name="com.example.fragmentguide0.QuestionFragment"
         android:layout_width="383dp"
         android:layout_height="39dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/abrir"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedor" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cerrar"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="581dp"
+        tools:ignore="MissingConstraints"
+
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/contenedor"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
